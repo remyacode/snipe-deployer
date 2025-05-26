@@ -1,0 +1,14 @@
+services:
+  - type: cron
+    name: fetch-snipe-drops
+    schedule: "0 6 * * *"  # 11:30 AM IST
+    runtime: python
+    buildCommand: ""
+    startCommand: python fetch_and_append.py
+
+  - type: cron
+    name: post-to-telegram
+    schedule: "0 10 * * *"  # 3:30 PM IST
+    runtime: python
+    buildCommand: ""
+    startCommand: python main.py
