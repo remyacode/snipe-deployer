@@ -1,7 +1,0 @@
-services:
-  - type: cron
-    name: snipe-autobot
-    schedule: "0 10 * * *"  # 3:30 PM IST
-    runtime: python
-    buildCommand: ""
-    startCommand: python run_snipe.py
